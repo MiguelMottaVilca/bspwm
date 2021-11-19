@@ -1,6 +1,7 @@
 #!/bin/sh
 
 picom -f &
-feh --bg-fill /home/miguel/Pictures/wallpaper.jpg &
+feh --bg-fill /usr/share/backgrounds/parrot-fly-grey.jpg &
+xrandr --setprovideroutputsource 1 0
 #chmod a+rw /sys/class/backlight/intel_backlight/brightness
 #setxkbmap latam 

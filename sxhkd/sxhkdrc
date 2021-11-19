@@ -125,11 +125,11 @@ super + {Left,Down,Up,Right}
 
 # Volume
 XF86AudioLowerVolume
-	amixer -q sset Master 10%-
+	amixer -q sset Master 5%-
 #pactl set-sink-volume @DEFAULT_SINK@ -5%
 
 XF86AudioRaiseVolume
-	amixer -q sset Master 10%+
+	amixer -q sset Master 5%+
 #pactl set-sink-volume @DEFAULT_SINK@ +5%
 
 XF86AudioMute
@@ -145,6 +145,6 @@ XF86MonBrightnessDown
 
 super + Print
 	scrot
-super + alt + Print
+super + shift + Print
 	scrot -s
 

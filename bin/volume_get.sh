@@ -1,6 +1,8 @@
 #!/bin/bash
 
-br=$(awk '/%/ {gsub(/[\[\%\]]/,""); print $4}' <(amixer sget Master))
+br=$(amixer get Master | grep Playback | awk 'NR==3' | sed 's/%\] \[on]*//' | sed 's/.* \[//'  )
+#echo -n "--$br--"
+
 if [ $br -eq 0 ]; then
     icon=ﱝ
 elif [ $br -le 25 ]; then 

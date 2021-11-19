@@ -1,6 +1,6 @@
 #!/bin/sh
 
-ips=$(hostname -I)
+ips=$(hostname -I | sed 's/ .*//')
 
 echo -n "$ips"
 
